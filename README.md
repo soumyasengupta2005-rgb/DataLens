@@ -220,10 +220,10 @@ GitHub:
 https://github.com/soumyasengupta2005-rgb
 
 Portfolio:  
-(Add Portfolio URL)
+(https://soumyasengupta2005-rgb.github.io/portfolio/)
 
 LinkedIn:  
-(Add LinkedIn URL)
+(https://www.linkedin.com/in/soumya-sengupta-a8346633a)
 
 ---
 
