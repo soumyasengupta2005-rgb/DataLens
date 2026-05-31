@@ -1,0 +1,34 @@
+@media print {
+
+  body {
+    background: white !important;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Hide everything by default */
+  body * {
+    visibility: hidden;
+  }
+
+  /* Show report */
+  #report-export,
+  #report-export * {
+    visibility: visible;
+  }
+
+  /* Position report at page start */
+  #report-export {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+}
+#report-export > * {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
