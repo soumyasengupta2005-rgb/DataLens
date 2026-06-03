@@ -358,8 +358,6 @@ export default function ReportDocument({ analysis, fileName }: Props) {
     const data = analysis.rawData[col];
     return data && new Set(data).size >= 5;
   });
-  console.log("chartColumns", chartColumns);
-  console.log("histogramColumns", histogramColumns);
 
   const meanBarItems = chartColumns.map((col) => ({
     label: col,

@@ -258,16 +258,8 @@ export function analyzeData(rawData: Record<string, string>[]): AnalysisResult {
       stat.q1 = percentile(nums, 25);
       stat.q3 = percentile(nums, 75);
       stat.skewness = skewness(nums);
-      const uniqueRatio = unique / rawValues.length;
 
       const lowerCol = col.toLowerCase();
-
-      console.log({
-        col,
-        unique,
-        total: rawValues.length,
-        uniqueRatio,
-      });
 
       stat.isIdentifier =
         lowerCol === "id" ||
@@ -283,9 +275,6 @@ export function analyzeData(rawData: Record<string, string>[]): AnalysisResult {
         .sort((a, b) => b[1] - a[1])
         .slice(0, 5)
         .map(([value, count]) => ({ value, count }));
-    }
-    if (stat.isIdentifier) {
-      console.log("IDENTIFIER DETECTED:", col);
     }
 
     columnStats[col] = stat;
